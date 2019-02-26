@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Progress Bar task</title>
+	<style type="text/css">
+		.wrapper {
+			width: 700px;
+			height: 200px;
+			border: 5px solid #108a06;
+			margin: 200px auto;
+		}
+		.progressContainer{
+			width: 600px;
+			height: 60px;
+			margin: 50px auto;
+			border:1px solid #ccc;
+		}
+		.progressBar{
+			width: 0px;
+			height: 60px;
+			background-color:#46f246;
+			animation: slide 3s linear infinite 0s;
+		}
+
+		h1{
+			margin: 0px;
+			padding: 0px;
+			padding: 10px;
+			text-align: center;
+			color: white;
+		}
+
+		.downProgress{
+			background:url(1.png);
+			width:600px;
+			height: 24px;
+			margin: 20px auto;
+			background-color: #1073c59c;
+			background-repeat: repeat-x;
+			background-position:top left;
+			animation: getSlide 3s linear infinite;
+		}
+
+		@keyframes getSlide{
+			0%{background-position:top 0px left 0px;}
+			100%{background-position:top 0px left 600px;}
+		}
+		
+
+		@keyframes slide{
+			0%{width: 0px;}
+			100%{width: 600px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="progressContainer">
+			<div class="progressBar">
+				<h1>Loading....</h1>
+			</div>
+			<br />
+			<div class="downProgress"></div>
+		</div>
+	</div>
+</body>
+</html>
